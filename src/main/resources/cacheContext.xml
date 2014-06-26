@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="gbk"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+    <!-- fetch url page cotent -->
+    <bean name="push_data" class="com.sohu.twitter.common.factory.SpyMemcachedBean">
+        <property name="ipList">
+            <value>${kesterl_server}</value>
+        </property>
+        <property name="connectionFactoryClassName">
+            <value>com.chinaren.twitter.util.KestrelSpyConnectionFactory</value>
+        </property>
+    </bean>
+</beans>
